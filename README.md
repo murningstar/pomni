@@ -1,6 +1,6 @@
 # What is Pomni?
 
-Pomni is spaced repetition app, aimed to deal with unintuitiveness in UI of other flashcard apps like Anki. Tbf, it's directly inspired by Anki and its weaknesses(my opinion).
+Pomni is spaced repetition app, aimed to deal with unintuitiveness of UI in other flashcard apps like Anki. Tbf, it's directly inspired by Anki and its main weakness(my opinion).
 
 ## In development
 
