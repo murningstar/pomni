@@ -1,25 +1,30 @@
 <script setup lang="ts">
 /* Tauri */
 import { invoke } from '@tauri-apps/api';
+// import { appWindow } from '@tauri-apps/api/window'
 /* Vue */
 import { ref } from 'vue';
 /* Components */
 import Titlebar from "@/components/Titlebar.vue"
 
-const res = ref("");
-async function send() {
-    res.value = await invoke('mycustomcommand', { asd: "asdf" });
+const testres = ref("");
+async function testsend() {
+    testres.value = await invoke('mycustomcommand', { asd: "asdf" });
 }
+
+const windowName = "Pomni"
+// appWindow.setTitle(windowName)
+
 </script>
 
 <template>
-    <Titlebar>Pomni</Titlebar>
+    <Titlebar>{{ windowName }}</Titlebar>
     <main>
-        <button @click="send">
+        <button @click="testsend">
             communicate with rust
         </button>
         <div class="">
-            {{ res }}
+            {{ testres }}
         </div>
     </main>
 </template>

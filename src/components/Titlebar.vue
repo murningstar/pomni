@@ -6,11 +6,9 @@ import { appWindow } from '@tauri-apps/api/window'
 <template>
     <div data-tauri-drag-region class="titlebar">
 
-        <div class="signature">
-            <div class="signature__icon">
-
-            </div>
-            <h1 class="signature__h1">
+        <div class="title">
+            <div class="title__icon"></div>
+            <h1 class="title__text">
                 <slot></slot>
             </h1>
         </div>
@@ -42,13 +40,13 @@ import { appWindow } from '@tauri-apps/api/window'
     display: flex;
     height: $Titlebar_height;
     background: rgb(79, 172, 254);
-    background: linear-gradient(-90deg, rgba(79, 172, 254, 1) 0%, rgba(0, 242, 254, 1) 50%);
+    background: linear-gradient(-90deg, rgba(79, 172, 254, 0.9) 0%, rgba(0, 242, 254, 1) 50%);
     user-select: none;
     justify-content: space-between;
     align-items: center;
 }
 
-.signature {
+.title {
     display: flex;
     align-items: center;
     margin-left: 0.5rem;
@@ -63,7 +61,7 @@ import { appWindow } from '@tauri-apps/api/window'
 
     }
 
-    &__h1 {
+    &__text {
         margin-left: 15px;
         font-size: 1rem;
         color: rgb(0, 0, 0);
@@ -86,4 +84,5 @@ import { appWindow } from '@tauri-apps/api/window'
             background-color: rgba(0, 107, 143, 0.515);
         }
     }
-}</style>
+}
+</style>
