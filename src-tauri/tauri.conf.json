@@ -1,48 +1,62 @@
 {
-  "build": {
-    "beforeDevCommand": "npm run dev",
-    "beforeBuildCommand": "npm run build",
-    "devPath": "http://localhost:1420",
-    "distDir": "../dist",
-    "withGlobalTauri": false
-  },
-  "package": {
-    "productName": "pomni",
-    "version": "0.0.1"
-  },
-  "tauri": {
-    "allowlist": {
-      "all": true,
-      "shell": {
-        "all": false,
-        "open": true
-      }
+    "build": {
+        "beforeDevCommand": "npm run dev",
+        "beforeBuildCommand": "npm run build",
+        "devPath": "http://localhost:5173",
+        "distDir": "../dist",
+        "withGlobalTauri": false
     },
-    "bundle": {
-      "active": true,
-      "targets": "all",
-      "identifier": "pomni",
-      "icon": [
-        "icons/32x32.png",
-        "icons/128x128.png",
-        "icons/128x128@2x.png",
-        "icons/icon.icns",
-        "icons/icon.ico"
-      ]
+    "package": {
+        "productName": "pomni",
+        "version": "0.0.1"
     },
-    "security": {
-      "csp": null
-    },
-    "windows": [
-      {
-        "fullscreen": false,
-        "resizable": true,
-        "title": "pomni",
-        "width": 800,
-        "height": 600,
-        "decorations": false,
-        "transparent": true
-      }
-    ]
-  }
+    "tauri": {
+        "allowlist": {
+            "all": true,
+            "shell": {
+                "all": false,
+                "open": true
+            }
+        },
+        "bundle": {
+            "active": true,
+            "targets": "all",
+            "identifier": "pomni",
+            "icon": [
+                "icons/32x32.png",
+                "icons/128x128.png",
+                "icons/128x128@2x.png",
+                "icons/icon.icns",
+                "icons/icon.ico"
+            ]
+        },
+        "security": {
+            "csp": null
+        },
+        "windows": [
+            {
+                "label": "vaults",
+                "fullscreen": false,
+                "resizable": true,
+                "title": "vaults",
+                "width": 800,
+                "height": 600,
+                "decorations": false,
+                "transparent": false,
+                "url": "windows/vaults/index.html",
+                "visible": false
+            },
+            {
+                "label": "pomni",
+                "fullscreen": false,
+                "resizable": false,
+                "title": "pomni",
+                "width": 800,
+                "height": 600,
+                "decorations": false,
+                "url": "index.html",
+                "visible": false
+            }
+        ]
+    }
 }
